@@ -1,0 +1,16 @@
+salesforce.CustomApplication Salto {
+  defaultLandingTab = "standard-home"
+  isNavAutoTempTabsDisabled = false
+  isNavPersonalizationDisabled = false
+  isNavTabPersistenceDisabled = false
+  isOmniPinnedViewEnabled = false
+  label = "Salto"
+  tabs = [
+    "standard-ApprovalSubmission",
+    "standard-ApprovalSubmissionDetail",
+    "standard-ApprovalWorkItem",
+    "standard-Lead",
+  ]
+  fullName = "Salto"
+  _alias = "Salto"
+}

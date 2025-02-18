@@ -1,0 +1,114 @@
+type salesforce.DecisionTblFileImportData {
+  serviceid Id {
+    apiName = "DecisionTblFileImportData.Id"
+    label = "Decision Table File data ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "DecisionTblFileImportData.OwnerId"
+    relationshipName = "Owner"
+    label = "Owner ID"
+    createable = true
+    updateable = true
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "DecisionTblFileImportData.IsDeleted"
+    defaultValue = false
+    label = "Deleted"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "DecisionTblFileImportData.Name"
+    label = "Decision Table File data Name"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "DecisionTblFileImportData.CreatedDate"
+    label = "Created Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "DecisionTblFileImportData.CreatedById"
+    relationshipName = "CreatedBy"
+    label = "Created By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "DecisionTblFileImportData.LastModifiedDate"
+    label = "Last Modified Date"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "DecisionTblFileImportData.LastModifiedById"
+    relationshipName = "LastModifiedBy"
+    label = "Last Modified By ID"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "DecisionTblFileImportData.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text DecisionTable {
+    apiName = "DecisionTblFileImportData.DecisionTable"
+    length = 40
+    _required = true
+    label = "DecisionTable"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+  salesforce.LongTextArea InputData {
+    apiName = "DecisionTblFileImportData.InputData"
+    length = 32000
+    label = "The input data of the decision table in JSON format."
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.LongTextArea OutputData {
+    apiName = "DecisionTblFileImportData.OutputData"
+    length = 32000
+    label = "The output data of the decision table in JSON format."
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Text HashKey {
+    apiName = "DecisionTblFileImportData.HashKey"
+    length = 60
+    _required = true
+    label = "Hash Key"
+    createable = true
+    updateable = true
+    unique = false
+    caseSensitive = false
+    queryable = true
+  }
+}
