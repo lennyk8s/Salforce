@@ -83,11 +83,11 @@ type salesforce.Lead {
     apiName = "Lead.Score__c"
     externalId = false
     label = "Score"
-    precision = 2
-    scale = 5
+    length = 80
     unique = false
     createable = true
     updateable = true
+    caseSensitive = false
     queryable = true
   }
 }
