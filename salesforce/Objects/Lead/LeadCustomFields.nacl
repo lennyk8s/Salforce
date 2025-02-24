@@ -79,15 +79,19 @@ type salesforce.Lead {
     caseSensitive = false
     queryable = true
   }
-  salesforce.Text Score__c {
+  salesforce.Number Score__c {
     apiName = "Lead.Score__c"
+    description = '''
+0-74 represents a cold lead
+75 - 99 represents a hot lead
+'''
     externalId = false
     label = "Score"
-    length = 80
+    precision = 2
+    scale = 0
     unique = false
     createable = true
     updateable = true
-    caseSensitive = false
     queryable = true
   }
 }

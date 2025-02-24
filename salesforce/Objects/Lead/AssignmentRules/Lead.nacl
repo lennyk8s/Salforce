@@ -1,20 +1,9 @@
 salesforce.AssignmentRules Lead {
   assignmentRule = [
     {
-      fullName = "Lead Score Based Assignment Rule"
+      fullName = "Lead Score Queue assignment"
       active = true
       ruleEntry = [
-        {
-          assignedTo = salesforce.Queue.instance.Hot_leads
-          assignedToType = "Queue"
-          criteriaItems = [
-            {
-              field = salesforce.Lead.field.Score__c
-              operation = "greaterOrEqual"
-              value = "75"
-            },
-          ]
-        },
         {
           assignedTo = salesforce.Queue.instance.Cold_Leads
           assignedToType = "Queue"
@@ -23,6 +12,17 @@ salesforce.AssignmentRules Lead {
               field = salesforce.Lead.field.Score__c
               operation = "lessOrEqual"
               value = "74"
+            },
+          ]
+        },
+        {
+          assignedTo = salesforce.Queue.instance.Hot_leads
+          assignedToType = "Queue"
+          criteriaItems = [
+            {
+              field = salesforce.Lead.field.Score__c
+              operation = "greaterOrEqual"
+              value = "75"
             },
           ]
         },
